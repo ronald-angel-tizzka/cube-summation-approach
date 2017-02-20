@@ -1,4 +1,4 @@
-from rows import RowQuery, RowUpdate
+from service.summation.rows import RowQuery, RowUpdate
 
 
 class MatrixUtils(object):

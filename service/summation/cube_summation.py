@@ -9,6 +9,10 @@ class CubeSummation(object):
         self.test_cases_number = int(input_file.readline())
 
     def calculate(self):
+        """  This method get the summation from the cube using a dictionary approach. The key is always x-y-z and the
+            complexity always depends on the on zero values on the matrix.
+            The result is a string with all the sum query results.
+        """
         result_general = ''
         for i in range(self.test_cases_number):
             matrix_size, operations_number = map(int, self.input_file.readline().split())

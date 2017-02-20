@@ -5,6 +5,8 @@ class MatrixUtils(object):
 
     @staticmethod
     def validate_sum(current_row_v, x1v, x2v, y1v, y2v, z1v, z2v):
+        """ Validate if there is a non zero value in all the ranges from a query
+        """
         return x1v <= current_row_v.x <= x2v \
                and y1v <= current_row_v.y <= y2v \
                and z1v <= current_row_v.z <= z2v
@@ -15,6 +17,8 @@ class MatrixUtils(object):
 
     @staticmethod
     def execute_query(line, table_dictionary):
+        """ Execute a QUERY operation
+        """
         row_query = RowQuery(line)
         sum_value = 0
         for current_key in table_dictionary:
@@ -26,6 +30,8 @@ class MatrixUtils(object):
 
     @staticmethod
     def execute_update(line, table_dictionary, matrix_size):
+        """ Execute an UPDATE operation
+        """
         row_update = RowUpdate(line)
         table_dictionary[MatrixUtils.generate_uuid(row_update.x, row_update.y, row_update.z, matrix_size)] = \
             (row_update.x, row_update.y, row_update.z, row_update.new_value)

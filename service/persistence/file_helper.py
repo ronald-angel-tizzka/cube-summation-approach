@@ -11,6 +11,8 @@ class FileHelper():
 
     @staticmethod
     def compare_files_data(path_1, path_2):
+        """  Method used by tests to compare the content from 2 files.
+        """
         file_1 = open(path_1, 'r')
         file_2 = open(path_2, 'r')
 
